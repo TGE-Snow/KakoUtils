@@ -1,11 +1,7 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
+import { WatchStatus,KMath } from "../func";
 
-import { KMath } from "../func";
-
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-console.log("ASDASDASD", KMath.round(1.55));
-
+WatchStatus.
 
 </script>
 

@@ -1,12 +1,14 @@
 {
   "name": "kakoutils",
-  "private": true,
-  "version": "0.0.1",
-  "main":"func/index.ts",
+  "private": false,
+  "version": "1.0.237",
+  "description": "",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "vue": "^3.2.25",
@@ -18,5 +20,10 @@
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
     "vue-tsc": "^0.34.7"
-  }
+  },
+  "files": [
+    "README.md",
+    "lib/",
+    "tsconfig.json"
+  ]
 }
