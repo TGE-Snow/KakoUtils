@@ -134,7 +134,9 @@ export declare global {
      * 倒序循环
      * @param callbackfn  一个最多接受三个参数的函数。forEach对数组中的每个元素调用一次callbackfn函数。
      */
-    forEachLast(callbackfn: (value: T, index: number, array: T[]) => void): void;
+    forEachLast(
+      callbackfn: (value: T, index: number, array: T[]) => void
+    ): void;
   }
   interface Object {
     /**

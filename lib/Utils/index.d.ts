@@ -5,7 +5,6 @@ export declare const Guid = {
   /**生成Guid */
   NewGuid(): String
 }
-module.exports = Guid;
 
 /**
  * 计算加法
@@ -274,7 +273,7 @@ export declare function windowsLocat(): XEUrl;
  */
 export declare function CookieFunc(name: string, value: any, options: CookieOptions): cookie;
 
-export type cookie = typeof CookieFunc & {
+export declare type cookie = typeof CookieFunc & {
   /**
    * 根据 name 判断 Cookie 是否存在
    * @param name 键

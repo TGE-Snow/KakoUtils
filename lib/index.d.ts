@@ -1,5 +1,9 @@
 import KakoUtils from ".";
 import "./Prototype";
+import "./Utils";
+import "./JudgeFunc";
+import "./WatchStatus";
+import "./KMath";
 
 export * from "./Utils";
 export * from "./JudgeFunc";

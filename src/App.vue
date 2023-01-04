@@ -3,10 +3,11 @@
 </template>
 
 <script lang="ts">
-import { add } from "xe-utils";
+import { add, isEmpty } from "xe-utils";
+import { Guid } from '../lib';
 export default {
   setup() {
-    console.log("Guid");
+    console.log("Guid",);
   },
 };
 </script>
