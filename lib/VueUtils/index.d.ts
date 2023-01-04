@@ -1,7 +1,7 @@
 /**
  * VUE监听管理类
  */
-interface WatchStatus {
+export declare interface WatchStatus {
   id: String;
   ind: number;
   watchList: any;
@@ -11,19 +11,15 @@ interface WatchStatus {
    * @param source
    * @param cb
    */
-  watch(id?: String, source: Function, cb: Function): any;
+  watch(source: Function, cb: Function, id?: String): any;
   /**
    * watchEffect监听
    * @param id
    * @param cb
    */
-  watchEffect(id?: String, cb: Function): any;
+  watchEffect(cb: Function, id?: String): any;
   /**
    * 取消所有监听
    */
   stop(): any;
 }
-
-declare var WatchStatus: WatchStatus;
-
-export default WatchStatus;

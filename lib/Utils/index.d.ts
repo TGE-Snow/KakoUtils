@@ -1,10 +1,158 @@
-/**Guid方法 */
-export declare const Guid = {
-  /**Guid为空 */
-  readonly Empty: String,
-  /**生成Guid */
-  NewGuid(): String
-}
+/**
+ * 判断字符串,数组,对象是否为空或长度为0
+ * @param cellValue
+ */
+export declare function isEmpty(cellValue: any): boolean;
+
+/**
+ * 判断是否数组
+ * @param str
+ */
+export declare function isArray(str: any): boolean;
+
+/**
+ * 判断是否小数
+ * @param str
+ */
+export declare function isFloat(str: any): boolean;
+
+/**
+ * 判断是否整数
+ * @param str
+ */
+export declare function isInteger(str: any): boolean;
+
+/**
+ * 判断是否方法
+ * @param str
+ */
+export declare function isFunction(str: any): boolean;
+
+/**
+ * 判断是否 Boolean 对象
+ * @param str
+ */
+export declare function isBoolean(str: any): boolean;
+
+/**
+ * 判断是否 String 对象
+ * @param str
+ */
+export declare function isString(str: any): boolean;
+
+/**
+ * 判断是否 Number 对象
+ * @param str
+ */
+export declare function isNumber(str: any): boolean;
+
+/**
+ * 判断是否 RegExp 对象
+ * @param str
+ */
+export declare function isRegExp(str: any): boolean;
+
+/**
+ * 判断是否 Object 对象
+ * @param str
+ */
+export declare function isObject(str: any): boolean;
+
+/**
+ * 判断是否是一个对象
+ * @param str
+ */
+export declare function isPlainObject(str: any): boolean;
+
+/**
+ * 判断是否 Date 对象
+ * @param val 值
+ */
+export declare function isDate(val: any): boolean;
+
+/**
+ * 判断是否为 Null
+ * @param val 值
+ */
+export declare function isNull(val: any): boolean;
+
+/**
+ * 判断是否闰年
+ * @param date 日期
+ */
+export declare function isLeapYear(date: Date | number | string): boolean;
+export declare function isLeapYear(date: any): boolean;
+
+/**
+ * 判断两个日期是否相同
+ * @param date1 日期
+ * @param date2 日期
+ * @param format 对比格式
+ */
+export declare function isDateSame(
+  date1: Date | number | string,
+  date2: Date | number | string,
+  format?: string | null
+): boolean;
+export declare function isDateSame(
+  date1: any,
+  date2: any,
+  format?: string | null
+): boolean;
+
+/**
+ * 查询数据
+ * @param obj 源数据
+ * @param iterate
+ */
+export declare function find(obj: any, iterate: any): any;
+
+/**
+ * 查询所有数据
+ * @param obj 源数据
+ * @param iterate
+ */
+export declare function findAll(obj: any, iterate: any): any;
+
+/**
+ * 查询数据索引
+ * @param obj 源数据
+ * @param iterate
+ */
+export declare function findIndex(obj: any, iterate: any): any;
+
+/**
+ * 查询所有数据索引
+ * @param obj 源数据
+ * @param iterate
+ */
+export declare function findIndexAll(obj: any, iterate: any): any;
+
+/**
+ * 获取一个指定范围内随机数
+ * @param min 最小值
+ * @param max 最大值
+ */
+export declare function random(min: number, max: number): number;
+
+/**
+ * 序列化查询参数
+ * @param query 查询参数
+ */
+export declare function serialize(query: any): string;
+
+/**
+ * 反序列化查询参数
+ * @param str 字符串
+ */
+export declare function unserialize(str: string): any;
+export declare function unserialize(str: any): any;
+
+/**Guid为空 */
+export declare var GuidEmpty: String;
+
+/**生成Guid */
+export declare function NewGuid(): String;
 
 /**
  * 计算加法
@@ -39,7 +187,10 @@ export declare function KakoDiv(): number;
  * @param startDate 开始日期
  * @param endDate 结束日期或当期日期
  */
-export declare function getDateDiff(startDate: string | Date | number, endDate: string | Date | number): DateDiffResult;
+export declare function getDateDiff(
+  startDate: string | Date | number,
+  endDate: string | Date | number
+): DateDiffResult;
 
 /**
  * 返回两个日期之间差距,如果结束日期小于开始日期 done 为 fasle
@@ -47,28 +198,41 @@ export declare function getDateDiff(startDate: string | Date | number, endDate: 
  * @param endDate 结束日期或当期日期
  * @param rules 自定义计算规则
  */
-export declare function getDateDiff(startDate: string | Date | number, endDate: string | Date | number, rules?: GetDateDiffRules): DateDiffResult;
+export declare function getDateDiff(
+  startDate: string | Date | number,
+  endDate: string | Date | number,
+  rules?: GetDateDiffRules
+): DateDiffResult;
 
 /**
  * 返回某个月份的天数,可以指定前几个月或后几个月，默认当前
  * @param date 字符串/日期/时间戳
  * @param offset 月偏移量(默认0)、前几个月、后几个月
  */
-export declare function getDayOfMonth(date: string | Date | number, offset: number): number;
+export declare function getDayOfMonth(
+  date: string | Date | number,
+  offset: number
+): number;
 
 /**
  * 返回某个月份的第几周
  * @param date 字符串/日期/时间戳
  * @param firstDay 周视图的起始天，默认星期一
  */
-export declare function getMonthWeek(date: string | Date | number, firstDay?: FirstDayOfWeek): number;
+export declare function getMonthWeek(
+  date: string | Date | number,
+  firstDay?: FirstDayOfWeek
+): number;
 
 /**
  * 返回某个年份的第几周
  * @param date 字符串/日期/时间戳
  * @param firstDay 从年初的星期几为起始开始周开始算，默认星期一
  */
-export declare function getYearWeek(date: string | Date | number, firstDay?: FirstDayOfWeek): number;
+export declare function getYearWeek(
+  date: string | Date | number,
+  firstDay?: FirstDayOfWeek
+): number;
 
 /**
  * 返回某个年份的第几天
@@ -81,14 +245,20 @@ export declare function getYearDay(date: string | Date | number): number;
  * @param date 字符串/日期/时间戳
  * @param offset 年偏移量(默认0)、前几个年、后几个年
  */
-export declare function getDayOfYear(date: string | Date | number, offset: number): Date;
+export declare function getDayOfYear(
+  date: string | Date | number,
+  offset: number
+): Date;
 
 /**
  * 返回前几天或后几天的日期
  * @param date 字符串/日期/时间戳
  * @param offset 天偏移量(默认0)、前几天、后几天
  */
-export declare function getWhatDay(date: string | Date | number, offset: number): Date;
+export declare function getWhatDay(
+  date: string | Date | number,
+  offset: number
+): Date;
 
 /**
  * 返回前几天或后几天的日期
@@ -96,14 +266,21 @@ export declare function getWhatDay(date: string | Date | number, offset: number)
  * @param offset 天偏移量(默认0)、前几天、后几天
  * @param mode 获取时间：日初(first)、日末(last)
  */
-export declare function getWhatDay(date: string | Date | number, offset: number, mode: 'first' | 'last'): Date;
+export declare function getWhatDay(
+  date: string | Date | number,
+  offset: number,
+  mode: "first" | "last"
+): Date;
 
 /**
  * 返回前几周或后几周的日期
  * @param date 字符串/日期/时间戳
  * @param offsetWeek 周偏移量(默认当前周)、前几周、后几周
  */
-export declare function getWhatWeek(date: string | Date | number, offsetWeek?: FirstDayOfWeek): Date;
+export declare function getWhatWeek(
+  date: string | Date | number,
+  offsetWeek?: FirstDayOfWeek
+): Date;
 
 /**
  * 返回前几周或后几周的日期,可以指定星期几(0~6)，默认当前
@@ -112,14 +289,22 @@ export declare function getWhatWeek(date: string | Date | number, offsetWeek?: F
  * @param offsetDay 获取星期几（星期天0、星期一1、星期二2、星期三3、星期四4、星期五5、星期六6）
  * @param firstDay 周视图的起始天，默认星期一
  */
-export declare function getWhatWeek(date: string | Date | number, offsetWeek?: number, offsetDay?: FirstDayOfWeek, firstDay?: FirstDayOfWeek): Date;
+export declare function getWhatWeek(
+  date: string | Date | number,
+  offsetWeek?: number,
+  offsetDay?: FirstDayOfWeek,
+  firstDay?: FirstDayOfWeek
+): Date;
 
 /**
  * 返回前几年或后几年的日期
  * @param date 字符串/日期/时间戳
  * @param year 年(默认当前年)、前几个年(数值)、后几个年(数值)
  */
-export declare function getWhatYear(date: string | Date | number, offset: number): Date;
+export declare function getWhatYear(
+  date: string | Date | number,
+  offset: number
+): Date;
 
 /**
  * 返回前几年或后几年的日期，可以指定年初(first)、年末(last)、月份(0~11)，默认当前
@@ -127,7 +312,11 @@ export declare function getWhatYear(date: string | Date | number, offset: number
  * @param year 年(默认当前年)、前几个年(数值)、后几个年(数值)
  * @param month 获取哪月：年初(first)、年末(last)、指定月份（0-11）
  */
-export declare function getWhatYear(date: string | Date | number, offset: number, month: number | 'first' | 'last'): Date;
+export declare function getWhatYear(
+  date: string | Date | number,
+  offset: number,
+  month: number | "first" | "last"
+): Date;
 
 /**
  * 日期格式化为任意格式字符串，转义符号 []
@@ -141,7 +330,10 @@ export declare function toDateString(date: any): string;
  * @param date 字符串/日期/时间戳
  * @param format 格式化 默认：yyyy-MM-dd HH:mm:ss.SSS
  */
-export declare function toDateString(date: string | Date | number, format: string | null): string;
+export declare function toDateString(
+  date: string | Date | number,
+  format: string | null
+): string;
 export declare function toDateString(date: any, format: string | null): string;
 
 /**
@@ -150,8 +342,16 @@ export declare function toDateString(date: any, format: string | null): string;
  * @param format 格式化 默认：yyyy-MM-dd HH:mm:ss.SSS
  * @param options 可选参数
  */
-export declare function toDateString(date: string | Date | number, format: string | null, options: ToDateStringOptions): string;
-export declare function toDateString(date: any, format: string | null, options: ToDateStringOptions): string;
+export declare function toDateString(
+  date: string | Date | number,
+  format: string | null,
+  options: ToDateStringOptions
+): string;
+export declare function toDateString(
+  date: any,
+  format: string | null,
+  options: ToDateStringOptions
+): string;
 
 /**
  * 任意格式字符串转为日期
@@ -165,7 +365,10 @@ export declare function toStringDate(str: any): Date;
  * @param str 字符串/日期/时间戳
  * @param format 解析格式 yyyy MM dd HH mm ss SSS
  */
-export declare function toStringDate(str: string | Date | number | null, format: string | null): Date;
+export declare function toStringDate(
+  str: string | Date | number | null,
+  format: string | null
+): Date;
 export declare function toStringDate(str: any, format: string | null): Date;
 
 /**
@@ -173,7 +376,10 @@ export declare function toStringDate(str: any, format: string | null): Date;
  * @param date 字符串/日期/时间戳
  * @param format 解析格式 yyyy MM dd HH mm ss SSS
  */
-export declare function timestamp(date: string | Date | number, format?: string | null): number;
+export declare function timestamp(
+  date: string | Date | number,
+  format?: string | null
+): number;
 export declare function timestamp(date: any, format?: string | null): number;
 
 /**
@@ -187,7 +393,11 @@ export declare function now(): number;
  * @param wait 毫秒
  * @param options 可选参数
  */
-export declare function debounce<C>(callback: (this: C, ...args: any[]) => any, wait: number, options?: DebounceOptions): (this: C, ...args: any[]) => any;
+export declare function debounce<C>(
+  callback: (this: C, ...args: any[]) => any,
+  wait: number,
+  options?: DebounceOptions
+): (this: C, ...args: any[]) => any;
 
 /**
  * 节流函数；当被调用 n 毫秒后才会执行，如果在这时间内又被调用则至少每隔 n 秒毫秒调用一次该函数
@@ -195,7 +405,11 @@ export declare function debounce<C>(callback: (this: C, ...args: any[]) => any, 
  * @param wait 毫秒
  * @param options 可选参数
  */
-export declare function throttle<C>(callback: (this: C, ...args: any[]) => any, wait: number, options?: ThrottleOptions): (this: C, ...args: any[]) => any;
+export declare function throttle<C>(
+  callback: (this: C, ...args: any[]) => any,
+  wait: number,
+  options?: ThrottleOptions
+): (this: C, ...args: any[]) => any;
 
 /**
  * 创建一个函数, 调用次数小于(不等于) count 次之前执行回调并将所有结果记住后返回
@@ -203,7 +417,11 @@ export declare function throttle<C>(callback: (this: C, ...args: any[]) => any, 
  * @param callback 回调
  * @param context 上下文
  */
-export declare function before<C>(count: number, callback: (this: C, rests: any[], ...args: any[]) => any, context?: C): (this: any, ...args: any[]) => any;
+export declare function before<C>(
+  count: number,
+  callback: (this: C, rests: any[], ...args: any[]) => any,
+  context?: C
+): (this: any, ...args: any[]) => any;
 
 /**
  * 创建一个函数, 调用次数大于(不等于) count 次之后执行回调并将所有结果记住后返回
@@ -211,7 +429,11 @@ export declare function before<C>(count: number, callback: (this: C, rests: any[
  * @param callback 回调
  * @param context 上下文
  */
-export declare function after<C>(count: number, callback: (this: C, ...args: any[]) => any, context?: C): (this: any,...args: any[]) => any;
+export declare function after<C>(
+  count: number,
+  callback: (this: C, ...args: any[]) => any,
+  context?: C
+): (this: any, ...args: any[]) => any;
 
 /**
  * 创建一个只能调用一次的函数,只会返回第一次执行后的结果
@@ -219,7 +441,11 @@ export declare function after<C>(count: number, callback: (this: C, ...args: any
  * @param context 上下文
  * @param params 额外的参数
  */
-export declare function once<S, C>(callback: (this: S, ...args: any[]) => any, context?: C, ...params: any[]): (this: S | C, ...args: any[]) => any;
+export declare function once<S, C>(
+  callback: (this: S, ...args: any[]) => any,
+  context?: C,
+  ...params: any[]
+): (this: S | C, ...args: any[]) => any;
 
 /**
  * 浅拷贝/深拷贝
@@ -254,13 +480,6 @@ export declare function toStringJSON(str: any): any;
 export declare function getType(obj: any): string;
 
 /**
- * 判断是否闰年
- * @param date 日期
- */
-export declare function isLeapYear(date: Date | number | string): boolean;
-export declare function isLeapYear(date: any): boolean;
-
-/**
  * 获取地址栏信息
  */
 export declare function windowsLocat(): XEUrl;
@@ -271,7 +490,11 @@ export declare function windowsLocat(): XEUrl;
  * @param value 值
  * @param options 可选参数
  */
-export declare function CookieFunc(name: string, value: any, options: CookieOptions): cookie;
+export declare function CookieFunc(
+  name: string,
+  value: any,
+  options: CookieOptions
+): cookie;
 
 export declare type cookie = typeof CookieFunc & {
   /**
@@ -310,4 +533,4 @@ export declare type cookie = typeof CookieFunc & {
    * 获取所有 Cookie
    */
   getJSON(): any;
-}
+};

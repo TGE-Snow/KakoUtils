@@ -128,7 +128,7 @@ export declare global {
      * @param fieldConfs 排序规则
      * @param context 上下文
      */
-    sort<T, C>(fieldConfs: OrderByFieldConfs<T, C>, context?: C): T[];
+    sortBy<T, C>(fieldConfs: OrderByFieldConfs<T, C>, context?: C): T[];
 
     /**
      * 倒序循环
