@@ -1,5 +1,5 @@
 /**
- * 监听管理类
+ * VUE监听管理类
  */
 interface WatchStatus {
   id: String;
@@ -7,15 +7,17 @@ interface WatchStatus {
   watchList: any;
   /**
    * watch监听
+   * @param id
    * @param source
    * @param cb
    */
-  watch(source: Function, cb: Function): any;
+  watch(id?: String, source: Function, cb: Function): any;
   /**
    * watchEffect监听
+   * @param id
    * @param cb
    */
-  watchEffect(cb: Function): any;
+  watchEffect(id?: String, cb: Function): any;
   /**
    * 取消所有监听
    */

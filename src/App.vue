@@ -3,8 +3,11 @@
 </template>
 
 <script lang="ts">
+import { add } from "xe-utils";
 export default {
-  setup() {},
+  setup() {
+    console.log("Guid");
+  },
 };
 </script>
 
