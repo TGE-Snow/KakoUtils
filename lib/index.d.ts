@@ -1,11 +1,8 @@
-import KakoUtils from ".";
+import KakoUtils from "./ctor";
+export * from "./Prototype";
 
-import "./Prototype";
-
-export * from "./Utils";
-export * from "./VueUtils";
 export * from "./KMath";
-
-declare const KakoUtils;
+export * from "./WatchStatus";
+export * from "./Utils/index";
 
 export default KakoUtils;

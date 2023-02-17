@@ -1,7 +1,4 @@
-export declare global {
-  /*~ Here, declare things that go in the global namespace, or augment
-   *~ existing declarations in the global namespace
-   */
+export declare namespace global {
   interface String {
     /**
      * 将数值四舍五入

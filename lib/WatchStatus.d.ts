@@ -2,7 +2,7 @@
  * VUE监听管理类
  */
 export declare interface WatchStatus {
-  id: String;
+  id: string;
   ind: number;
   watchList: any;
   /**
@@ -11,15 +11,21 @@ export declare interface WatchStatus {
    * @param source
    * @param cb
    */
-  watch(source: Function, cb: Function, id?: String): any;
+  watch(source: Function, cb: Function, id?: string): any;
   /**
    * watchEffect监听
    * @param id
    * @param cb
    */
-  watchEffect(cb: Function, id?: String): any;
+  watchEffect(cb: Function, id?: string): any;
   /**
    * 取消所有监听
    */
-  stop(): any;
+  stop(d: any): any;
 }
+
+declare module "./ctor" {
+  WatchStatus;
+}
+
+export default WatchStatus;

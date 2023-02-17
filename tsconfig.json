@@ -16,6 +16,6 @@
     "declarationDir": "lib",
     "rootDir": "lib",
   },
-  "include": ["lib/**/*.ts", "lib/**/*.d.ts", "lib/**/*.tsx", "lib/**/*.vue"],
+  "include": ["lib/**/*.ts", "lib/**/*.d.ts", "lib/**/*.tsx", "lib/**/*.vue", "lib/Prototype/index.js", "lib/KMath.js", "lib/index.js", "lib/Utils/index.js", "lib/WatchStatus.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

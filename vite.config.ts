@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 const path = require("path");
 import vue from "@vitejs/plugin-vue";
-import { toDateString } from "xe-utils";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +15,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "lib/index"),
       name: "KakoUtils",
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `kakoutils.${format}.js`,
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

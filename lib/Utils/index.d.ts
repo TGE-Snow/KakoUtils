@@ -534,3 +534,115 @@ export declare type cookie = typeof CookieFunc & {
    */
   getJSON(): any;
 };
+
+declare module "./ctor" {
+  interface KakoUtilsMethods {
+    isEmpty: typeof isEmpty;
+    isArray: typeof isArray;
+    isFloat: typeof isFloat;
+    isInteger: typeof isInteger;
+    isFunction: typeof isFunction;
+    isBoolean: typeof isBoolean;
+    isString: typeof isString;
+    isNumber: typeof isNumber;
+    isRegExp: typeof isRegExp;
+    isObject: typeof isObject;
+    isPlainObject: typeof isPlainObject;
+    isDate: typeof isDate;
+    isNull: typeof isNull;
+    isLeapYear: typeof isLeapYear;
+    isDateSame: typeof isDateSame;
+    find: typeof find;
+    findAll: typeof findAll;
+    findIndex: typeof findIndex;
+    findIndexAll: typeof findIndexAll;
+    random: typeof random;
+    serialize: typeof serialize;
+    unserialize: typeof unserialize;
+    GuidEmpty: typeof GuidEmpty;
+    NewGuid: typeof NewGuid;
+    KakoAdd: typeof KakoAdd;
+    KakoSub: typeof KakoSub;
+    KakoMul: typeof KakoMul;
+    KakoDiv: typeof KakoDiv;
+    getDateDiff: typeof getDateDiff;
+    getDayOfMonth: typeof getDayOfMonth;
+    getMonthWeek: typeof getMonthWeek;
+    getYearWeek: typeof getYearWeek;
+    getYearDay: typeof getYearDay;
+    getDayOfYear: typeof getDayOfYear;
+    getWhatDay: typeof getWhatDay;
+    getWhatWeek: typeof getWhatWeek;
+    getWhatYear: typeof getWhatYear;
+    toDateString: typeof toDateString;
+    toStringDate: typeof toStringDate;
+    timestamp: typeof timestamp;
+    now: typeof now;
+    debounce: typeof debounce;
+    throttle: typeof throttle;
+    before: typeof before;
+    after: typeof after;
+    once: typeof once;
+    clone: typeof clone;
+    toJSONString: typeof toJSONString;
+    toStringJSON: typeof toStringJSON;
+    getType: typeof getType;
+    windowsLocat: typeof windowsLocat;
+    cookie: typeof cookie;
+  }
+}
+
+export default {
+  isEmpty,
+  isArray,
+  isFloat,
+  isInteger,
+  isFunction,
+  isBoolean,
+  isString,
+  isNumber,
+  isRegExp,
+  isObject,
+  isPlainObject,
+  isDate,
+  isNull,
+  isLeapYear,
+  isDateSame,
+  find,
+  findAll,
+  findIndex,
+  findIndexAll,
+  random,
+  serialize,
+  unserialize,
+  GuidEmpty,
+  NewGuid,
+  KakoAdd,
+  KakoSub,
+  KakoMul,
+  KakoDiv,
+  getDateDiff,
+  getDayOfMonth,
+  getMonthWeek,
+  getYearWeek,
+  getYearDay,
+  getDayOfYear,
+  getWhatDay,
+  getWhatWeek,
+  getWhatYear,
+  toDateString,
+  toStringDate,
+  timestamp,
+  now,
+  debounce,
+  throttle,
+  before,
+  after,
+  once,
+  clone,
+  toJSONString,
+  toStringJSON,
+  getType,
+  windowsLocat,
+  cookie,
+};

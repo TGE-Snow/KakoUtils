@@ -1,9 +1,10 @@
 {
   "name": "kakoutils",
-  "private": false,
-  "version": "1.0.280",
+  "version": "1.0.310",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/index",
+  "types": "module",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

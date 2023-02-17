@@ -1,4 +1,4 @@
-declare interface KMath {
+export declare interface KMath {
   /** 表示自然对数的底数（或称为基数），e，约等于 2.718 */
   readonly E: number;
 
@@ -260,6 +260,8 @@ declare interface KMath {
   toNumber(num: number | string | null): number;
 }
 
-declare var KMath: KMath;
+declare module "./ctor" {
+  KMath;
+}
 
 export default KMath;
